@@ -7,9 +7,19 @@ public class Country {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Country.class);
 
+    private String code;
     private String name;
     private String capital;
     private String currency;
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        LOGGER.info("Setting country code: {}", code);
+        this.code = code;
+    }
 
     public String getName() {
         return name;
@@ -40,6 +50,6 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country [name=" + name + ", capital=" + capital + ", currency=" + currency + "]";
+        return "Country [code=" + code + ", name=" + name + ", capital=" + capital + ", currency=" + currency + "]";
     }
 }

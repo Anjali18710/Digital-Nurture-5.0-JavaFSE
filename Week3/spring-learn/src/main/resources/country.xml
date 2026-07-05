@@ -5,6 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="country" class="com.cognizant.spring_learn.Country">
+        <property name="code" value="IN" />
         <property name="name" value="India" />
         <property name="capital" value="New Delhi" />
         <property name="currency" value="Rupee" />
