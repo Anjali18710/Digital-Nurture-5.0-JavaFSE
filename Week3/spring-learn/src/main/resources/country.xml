@@ -4,11 +4,35 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="country" class="com.cognizant.spring_learn.Country">
+    <bean id="india" class="com.cognizant.spring_learn.Country">
         <property name="code" value="IN" />
         <property name="name" value="India" />
         <property name="capital" value="New Delhi" />
         <property name="currency" value="Rupee" />
+    </bean>
+
+    <bean id="usa" class="com.cognizant.spring_learn.Country">
+        <property name="code" value="US" />
+        <property name="name" value="United States" />
+        <property name="capital" value="Washington D.C." />
+        <property name="currency" value="Dollar" />
+    </bean>
+
+    <bean id="japan" class="com.cognizant.spring_learn.Country">
+        <property name="code" value="JP" />
+        <property name="name" value="Japan" />
+        <property name="capital" value="Tokyo" />
+        <property name="currency" value="Yen" />
+    </bean>
+
+    <bean id="countryList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="india" />
+                <ref bean="usa" />
+                <ref bean="japan" />
+            </list>
+        </constructor-arg>
     </bean>
 
 </beans>
